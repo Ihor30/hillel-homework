@@ -3,7 +3,7 @@ import flask
 from flask import request
 import string
 import random
-import requests
+import webbrowser
 
 app = flask.Flask(__name__)
 
@@ -18,8 +18,8 @@ def whoami():
 
 @app.route("/source_code")
 def source_code():
-    r = requests.get('https://flask.palletsprojects.com/en/2.0.x/')
-    return r.json()
+    r = webbrowser.open('dz4.py')
+    return r
 
 
 @app.route("/random")
